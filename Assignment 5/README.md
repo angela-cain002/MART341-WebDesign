@@ -1,0 +1,4 @@
+Reflect on a class you truly enjoyed (this could be from a university, college, high school, or even an extracurricular activity); what made it special?
+
+Answer:
+My favorite class ever was actually a class I just took "for fun" at UM. The class was titled "Modern Horror Films". This class was one of the only educational opportunities I have had as of late that truly took a deep dive into the type of content I consume on a daily basis - i.e., horror films. It was interesting to debate and research into the history of horror, how the zeitgeist of American and international cultures reflected global fears and ideas into something as unique as the horror genre, and the editing of horror films. 
