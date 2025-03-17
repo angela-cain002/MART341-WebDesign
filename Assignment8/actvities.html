@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist Related Activities</title>
+    <style>
+        body {
+            background-color: #fff0f5; /* Light pink background */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: #4d4d4d;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #f9f1e7; /* Soft cream */
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #c7a17a; /* Matcha brown */
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #ffb6c1; /* Soft strawberry pink */
+            color: #fff;
+        }
+        .nav-links a {
+            margin: 10px;
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            background-color: #9bcf53; /* Matcha green */
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .nav-links a:hover {
+            background-color: #7ba843; /* Darker matcha */
+        }
+        .form-container {
+            margin: 20px auto;
+            width: 50%;
+            background-color: #f9f1e7;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        input, textarea {
+            width: 90%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #c7a17a;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #ffb6c1;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        input[type="submit"]:hover {
+            background-color: #e89ca3;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="activities.html">ACTIVITIES</a>
+        <a href="playlist.html">Playlist Examples</a>
+    </div>
+    
+    <h1>Welcome to Aux Cord Authority!</h1>
+    <img src="./Spotify_Home.png" alt="My Spotify Home" title="My Spotify Home" width="300" height="200">
+    
+    <h2>New Task!</h2>
+    <p>Create your own playlist using the suggested checklist below!</p>
+    <table>
+        <tr>
+            <th>Theme It</th>
+            <th>Choose Songs</th>
+            <th>Download It</th>
+        </tr>
+        <tr>
+            <td>Theme it</td>
+            <td>I have chosen a theme for my playlist!</td>
+            <td>Please define your theme below!</td>
+            <td><textarea name="comment"></textarea></td>
+        </tr>
+        <tr>
+            <td>Choose Songs</td>
+            <td>I have chosen at least 20 songs that match my theme above</td>
+            <td>Tell me your 3 top songs on this playlist and why!</td>
+            <td><textarea name="comment"></textarea></td>
+        </tr>
+        <tr>
+            <td>Download It</td>
+            <td>I have somehow, or someway downloaded this playlist.</td>
+            <td>Check the checkbox if you can confirm that I could drop you off into the most remote location possible, and you would still have a top-tier playlist.</td>
+            <td><input type="checkbox" name="select_user"></td>
+        </tr>
+    </table>
+    
+    <h2>Contact Form</h2>
+    <div class="form-container">
+        <form id="contactForm" class="contact-form" action="mailto:angela.cain@umconnect.umt.edu?subject=Activities" method="post" enctype="text/plain">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="30" required></textarea><br><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
