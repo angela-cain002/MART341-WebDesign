@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick Your First Guitar!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0a192f; 
+            color: #c3bef0; 
+            text-align: center;
+            padding: 20px;
+        }
+
+        
+        nav {
+            background-color: #233554;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav a {
+            color: #c3bef0;
+            font-size: 1.2em;
+            padding: 10px;
+            text-decoration: none;
+            margin: 0 20px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #5a5da0; 
+            color: #f8f8ff;
+            border-radius: 5px;
+        }
+        header {
+            width: 100%;
+            position: relative;
+        }
+
+        header img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        header h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3em;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Glowing effect */
+        }
+
+        /* Grid Layout for 8 Steps */
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .step {
+            background-color: #112240; 
+            padding: 20px;
+            color: #f8f8ff;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(100, 140, 255, 0.5); 
+        }
+
+        .step h3 {
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            font-size: 1em;
+        }
+
+        /* Video Section */
+        .video-container {
+            background: #233554;
+            padding: 30px;
+            margin-top: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(90, 93, 160, 0.7);
+        }
+
+        .video-container h2 {
+            color: #f8f8ff;
+            margin-bottom: 20px;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Quiz Container */
+        .quiz-container {
+            max-width: 800px;
+            margin: auto;
+            background: #112240; /* Dark Teal */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(100, 140, 255, 0.5); /* Glowing Effect */
+        }
+
+        h1 {
+            color: #8892b0;
+        }
+
+        .question {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .option {
+            padding: 12px;
+            background: #233554; /* Muted Ocean Blue */
+            border: 2px solid #3a506b; /* Deep Sea Border */
+            color: #c3bef0;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .option:hover {
+            background: #5a5da0; /* Mystic Purple Glow */
+            color: #f8f8ff;
+            border-color: #8892b0; /* Lighter Seafoam */
+            box-shadow: 0 0 10px rgba(90, 93, 160, 0.7);
+        }
+
+        /* Hide all result sections by default */
+        .result {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+            background: #5a5da0; /* Mystic Purple */
+            color: #f8f8ff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(90, 93, 160, 0.7);
+        }
+
+        /* This section of CSS was harder. This displays the results of the quiz answers. */
+        #question1:checked ~ .result1,
+        #question2:checked ~ .result2,
+        #question3:checked ~ .result3 {
+            display: block;
+        }
+
+        #question1:checked ~ .result1 {
+            display: block;
+        }
+
+        #question2:checked ~ .result2 {
+            display: block;
+        }
+
+        #question3:checked ~ .result3 {
+            display: block;
+        }
+
+        .result1 {
+            background: #ff9800;
+        }
+
+        .result2 {
+            background: #ff9800;
+        }
+
+        .result3 {
+            background: #ff9800;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="Gallery.html">Gallery</a>
+        <a href="Instruct.html">Quiz Page</a>
+        <a href="History.html">History Page</a>
+    </nav>
+    <header>
+        <img src="images/banner.jpg" alt="Banner image">
+        <h1>Pick Your First Guitar Quiz</h1>
+    </header>
+
+    <div class="steps-container">
+        <div class="step">
+            <h3>Step 1: Tell me whatcha want! </h3>
+            <p>What level of cool do you want to be? Taylor Swift Acoustic? Flea Bass? Jimi Hendrix Electric? All are fine, some are harder to learn on than others.</p>
+        </div>
+        <div class="step">
+            <h3>Step 2: "I'm not here to make sense, I'm here to make dollars!"</h3>
+            <p>You go into debt after a medical emergency, not after buying a guitar. Buy according to your budget and needs.</p>
+        </div>
+        <div class="step">
+            <h3>Step 3: You actually do know what you get in a box of chocolates, but you should try each one for Forrest Gump's sake.</h3>
+            <p>I know going outside and talking to people is hard, but buying a guitar without feeling the guitar robs you of a cool 'main character' moment of buying a guitar in store. Walk into the store, it'll be cool.</p>
+        </div>
+        <div class="step">
+            <h3>Step 4: A snuggie for your hands! Or not, especially if you enjoy mild discomfort.</h3>
+            <p>Guitars are so many different shapes and sizes! Andre the Giant's guitar size is probably different than yours. Pick one that fits you. </p>
+        </div>
+        <div class="step">
+            <h3>Step 5: Not all guitars are made equal! I made a guitar out of a cereal box once. </h3>
+            <p>If you need an instruction manual on how to build a guitar out of a cereal bar, find a box of fruit loops from, like, 2010. Make sure you pick a guitar with good quality materials.</p>
+        </div>
+        <div class="step">
+            <h3>Step 6: Remember in step 1, where I said some are harder to learn than others? This is that. Electric guitars and bass guitars are harder to learn, you'll need to learn about the electronics it uses.</h3>
+            <p>If you’re buying an electric guitar, check its pickups and controls.</p>
+        </div>
+        <div class="step">
+            <h3>Step 7: You've got 99 problems and keeping track of accessories is at least 5 of them. </h3>
+            <p>Don’t forget about accessories like strings, a tuner, and a case.</p>
+        </div>
+        <div class="step">
+            <h3>Step 8: You need an Obi Wan Kenobi! All good adventurers have a good moment where they meet a wise mentor. Don't skip out on advice. </h3>
+            <p>Get recommendations from experienced players or staff in a music store.</p>
+        </div>
+    </div>
+
+    <!-- Video Section -->
+    <div class="video-container">
+        <h2>Types of Sounding Guitars</h2>
+            <iframe width="100%" height="auto" 
+                src="https://www.youtube.com/watch?v=iM5wvEzUyLc" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+    </div>
+
+    <!-- Quiz Container -->
+    <div class="quiz-container">
+        <h1>Pick Your First Guitar Quiz</h1>
+
+        <!-- Question 1 -->
+        <div class="question">
+            <p>What style of music do you want to play?</p>
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="question1" id="question1" value="electric"> Rock/Metal
+                </label>
+                <label class="option">
+                    <input type="radio" name="question1" id="question2" value="semi-hollow"> Blues/Jazz
+                </label>
+                <label class="option">
+                    <input type="radio" name="question1" id="question3" value="acoustic"> Acoustic/Folk
+                </label>
+            </div>
+        </div>
+
+        <!-- Results for question 1 -->
+        <div class="result result1">
+            <p>You might want to try an electric guitar, like a Fender Stratocaster for Rock/Metal.</p>
+        </div>
+        <div class="result result2">
+            <p>Consider a semi-hollow guitar, like an Epiphone Dot for Blues/Jazz.</p>
+        </div>
+        <div class="result result3">
+            <p>Try an acoustic guitar like a Yamaha FG800 for Acoustic/Folk music.</p>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <p>What’s your budget?</p>
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="question2" id="question4" value="budget"> $200-$500
+                </label>
+                <label class="option">
+                    <input type="radio" name="question2" id="question5" value="mid-range"> $500-$1000
+                </label>
+                <label class="option">
+                    <input type="radio" name="question2" id="question6" value="premium"> $1000+
+                </label>
+            </div>
+        </div>
+
+        <!-- Results for question 2 -->
+        <div class="result result1">
+            <p>You can get a quality beginner guitar like a Squier Stratocaster within this budget.</p>
+        </div>
+        <div class="result result2">
+            <p>Consider a mid-range guitar like an Epiphone Les Paul Standard for this budget.</p>
+        </div>
+        <div class="result result3">
+            <p>Check out premium models like a Fender American Professional Stratocaster.</p>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <p>Do you want a smaller, beginner-friendly guitar?</p>
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="question3" id="question7" value="small"> Yes, something easy to hold!
+                </label>
+                <label class="option">
+                    <input type="radio" name="question3" id="question8" value="full-size"> No, full-size is fine!
+                </label>
+            </div>
+        </div>
+
+        <!-- Results for question 3 -->
+        <div class="result result1">
+            <p>A smaller guitar like a Fender CP-60S Parlor would be a good choice for comfort.</p>
+        </div>
+        <div class="result result2">
+            <p>Go for a full-size guitar like a Seagull S6 or a Yamaha FG800.</p>
+        </div>
+    </div>
+
+</body>
+</html>
