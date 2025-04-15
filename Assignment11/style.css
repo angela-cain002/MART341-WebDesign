@@ -1,0 +1,93 @@
+/* Self-Hosted Font */
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../fonts/SelfHostedFont.woff2') format('woff2');
+  }
+  
+  /* Base Styles */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFE4F3; /* Barbie pastel pink */
+    color: #4B004B;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  .title {
+    font-family: 'CustomFont', serif;
+    font-size: 3rem;
+    text-align: center;
+    color: #FF1493;
+    font-weight: 700;
+  }
+  
+  .subtitle {
+    text-align: center;
+    letter-spacing: 1px;
+    color: #FF69B4;
+    font-style: italic;
+    margin-bottom: 30px;
+  }
+  
+  /* Section Title */
+  .section-title {
+    text-decoration: underline;
+    margin-top: 30px;
+    color: #C71585;
+    text-align: center;
+  }
+  
+  /* List Container */
+  .drag-lists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    list-style: none;
+    margin: 0;
+  }
+  
+  /* Each List Item */
+  .drag-lists li {
+    background: #fff0fb;
+    border-radius: 15px;
+    padding: 15px;
+    width: 240px;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(255, 105, 180, 0.4);
+    transition: transform 0.3s;
+  }
+  
+  .drag-lists li:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Image Styling */
+  .drag-lists img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid #FF69B4;
+    margin-bottom: 10px;
+  }
+  
+  /* Quote/Text Styling */
+  .drag-lists .quote {
+    font-size: 0.95rem;
+    color: #800080;
+    font-style: italic;
+    padding: 0 5px;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #DB7093;
+  }
+  
