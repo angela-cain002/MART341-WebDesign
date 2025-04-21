@@ -1,0 +1,137 @@
+/* General Music Festival Theme */
+body {
+    background: linear-gradient(to bottom, #ffecd2, #fcb69f);
+    font-family: 'Verdana', sans-serif;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  header {
+    background-color: #ff4081;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .lineup, .info {
+    margin: 30px auto;
+    max-width: 600px;
+  }
+  
+  footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  /* Core Styling Properties */
+  
+  /* Sizing */
+  .box {
+    width: 250px;
+    height: auto;
+    margin: 0 auto 20px;
+    padding: 10px;
+    background-color: lightpink;
+    font-weight: bold;
+  }
+  
+  /* Overflow */
+  .overflow-box {
+    width: 300px;
+    height: 100px;
+    overflow: auto;
+    margin: 20px auto;
+    border: 1px solid gray;
+    padding: 10px;
+    background-color: #fff8f0;
+  }
+  
+  /* Border */
+  .border-example {
+    border: 2px dashed hotpink;
+    padding: 15px;
+    margin: 20px auto;
+    width: 300px;
+    background-color: #fff0f5;
+  }
+  
+  /* Margin */
+  .margin-example {
+    margin: 30px auto;
+    width: 300px;
+    padding: 10px;
+    background-color: #ffe4e1;
+  }
+  
+  /* Padding */
+  .padding-example {
+    padding: 20px;
+    background-color: lavender;
+  }
+  
+  /* Position */
+  .position-example {
+    position: relative;
+    top: 5px;
+    left: 0;
+    background-color: peachpuff;
+    padding: 10px;
+    margin: 10px auto;
+    width: fit-content;
+  }
+  /* Hero image */
+.hero img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-bottom: 4px solid #ff4081;
+  }
+  
+  /* Navigation */
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    background-color: #ffe4e1;
+    list-style: none;
+    margin: 0;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #ff4081;
+    font-weight: bold;
+  }
+  
+  /* Gallery layout */
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  /* Fun Borders */
+  .gallery-image img {
+    width: 100%;
+    height: auto;
+    border: 6px double hotpink;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-image img:hover {
+    transform: scale(1.05) rotate(1deg);
+  }
+  
