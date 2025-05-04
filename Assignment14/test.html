@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chaos Gallery - Slideshow</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      transition: background-color 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Gallery</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="test.html">Slideshow</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="d-flex justify-content-center align-items-center mb-4">
+      <h2 class="me-3 mb-0">Image Slideshow</h2>
+      <button class="btn btn-outline-primary" data-bs-target="#chaosCarousel" data-bs-slide="next">Next Slide</button>
+    </div>
+
+    <div id="chaosCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner text-center">
+        <div class="carousel-item active">
+          <img src="media/flower.png" alt="Slide 1" class="d-block mx-auto img-fluid">
+        </div>
+        <div class="carousel-item">
+          <img src="media/slug.png" alt="Slide 2" class="d-block mx-auto img-fluid">
+        </div>
+        <div class="carousel-item">
+          <img src="media/dog.png" alt="Slide 3" class="d-block mx-auto img-fluid">
+        </div>
+        <div class="carousel-item">
+            <img src="media/falls.png" alt="Slide 4" class="d-block mx-auto img-fluid">
+        </div>
+        <div class="carousel-item">
+            <img src="media/forest.png" alt="Slide 5" class="d-block mx-auto img-fluid">
+        </div>
+        <div class="carousel-item">
+            <img src="media/redwoods.png" alt="Slide 6" class="d-block mx-auto img-fluid">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#chaosCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#chaosCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+  </script>
+
+<script>
+    const colors = ['#FF6B6B', '#6BCB77', '#4D96FF', '#FFC75F', '#D65DB1', '#845EC2', '#00C9A7', '#FF5733', '#33FF57', '#8E44AD'];
+    function changeBackgroundColor() {
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      document.body.style.backgroundColor = randomColor;
+    }
+    document.addEventListener('mousemove', changeBackgroundColor);
+  </script>
+
+</body>
+</html>
