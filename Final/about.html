@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Me</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="about.html">About</a>
+    <a href="journey.html">Journey</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="slide active">Hello! My name is Angela Cain!</div>
+  <div class="slide">I hope to take you all on a journey through my experience of web design.</div>
+  <div class="slide">This site will feature interactivity, fun colors, and hopefully some fun tips and tricks I have learned throughout my coursework!</div>
+  <div class="slide">Some fun facts about whose site you're on are.......</div>
+  <div class="slide">I am 22 years old!</div>
+  <div class="slide">My mother is a Filipino immigrant who moved here in 1989. </div>
+  <div class="slide">My father is a Navy Veteran with 22 years of service under his belt!</div>
+  <div class="slide">I’m a senior in Media Arts and plan to pursue Medical Illustration for graduate school.</div>
+  <div class="slide">I grew up on a farm with 5 dogs, 2 cats, 6 chickens, and a turtle!</div>
+  <div class="slide">I’ve greatly enjoyed my journey through web design and look forward to applying my skills professionally and creatively!</div>
+  <div class="slide"> Click "Journey" to see my ups and downs of my Web Design experience!</div>
+  <div class="slide">Click "Soundtrack" to move through a soundtrack of my Web Design Study Jam Music!</div>
+
+  <footer>Press the Spacebar to proceed through the story!</footer>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let current = 0;
+
+    document.addEventListener('keydown', (e) => {
+      if (e.code === 'Space') {
+        e.preventDefault();
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>

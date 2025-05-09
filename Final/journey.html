@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Journey!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="about.html">About</a>
+    <a href="journey.html">Journey</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main class="journey-container">
+    <h1>My Web Design Journey</h1>
+    
+    <div class="slideshow">
+      <img src="media/first.png" alt="Screenshot 1" class="slide active">
+      <img src="media/second.png" alt="Screenshot 2" class="slide">
+      <img src="media/third.png" alt="Screenshot 3" class="slide">
+      <img src="media/final.png" alt="Screenshot 3" class="slide">
+      <button id="nextSlide">Next</button>
+    </div>
+  </main>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    document.getElementById('nextSlide').addEventListener('click', () => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    });
+  </script>
+</body>
+</html>
